@@ -160,7 +160,7 @@ module Debugger
 
       return unless ENV['IDE_PROCESS_DISPATCHER']
       acceptor_host, acceptor_port = ENV['IDE_PROCESS_DISPATCHER'].split(":")
-      acceptor_host, acceptor_port = '127.0.0.1', acceptor_host unless acceptor_port
+      acceptor_host, acceptor_port = '0.0.0.0', acceptor_host unless acceptor_port
       connected = false
 
       3.times do |i|
