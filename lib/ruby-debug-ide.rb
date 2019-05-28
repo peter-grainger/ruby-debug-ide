@@ -162,6 +162,10 @@ module Debugger
       acceptor_host, acceptor_port = ENV['IDE_PROCESS_DISPATCHER'].split(":")
       acceptor_host, acceptor_port = '0.0.0.0', acceptor_host unless acceptor_port
       connected = false
+      
+      $stderr.puts "Accecptor Host: #{acceptor_host}"
+      $stderr.puts "Accecptor Port: #{acceptor_port}"
+
 
       3.times do |i|
         begin
