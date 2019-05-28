@@ -118,7 +118,7 @@ module Debugger
         begin
           # 127.0.0.1 seemingly works with all systems and with IPv6 as well.
           # "localhost" and nil have problems on some systems.
-          host ||= '127.0.0.1'
+          host ||= '0.0.0.0'
 
           server = notify_dispatcher_if_needed(host, port, notify_dispatcher) do |real_port, port_changed|
             s = TCPServer.new(host, real_port)
